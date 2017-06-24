@@ -1,0 +1,47 @@
+<paquet
+	prefix="cnde"
+	categorie="squelette"
+	version="1.0.0"
+	etat="dev"
+	compatibilite="[3.1.6;3.1.*]"
+	logo="prive/themes/spip/images/cnde-64.png"
+	documentation=""
+	schema="1.0.0" 
+>
+	<!--
+		Paquet généré le 2017-06-24 14:07:44
+		(Vous pouvez bien entendu supprimer ces commentaires) 
+	-->
+
+	<nom>Squelettes CNDE</nom>
+	<!-- CNDE -->
+
+	<!-- cette balise peut être présente plusieurs fois s'il y a plusieurs auteurs --> 
+	<auteur lien='https://websimple.be'>Rainer</auteur>
+
+	<licence>GNU/GPL</licence>
+
+	<!--
+		Exemple de commandes
+		* dependances
+		<necessite nom="saisies" compatibilite="[2.4.0;]" />
+		<utilise nom="saisies" compatibilite="[2.4.0;]" />
+		<lib nom="simplehtmldom" lien="http://chemin_vers_archive.zip" />
+		* pipelines
+		<pipeline nom="autoriser" inclure="cnde_autorisations.php" />
+		<pipeline nom="insert_head" inclure="cnde_pipelines.php" />
+		* declarer un pipeline 
+		<pipeline nom="mon_pipeline" action="" />
+		* parents de menus de SPIP :
+				menu_accueil (à éviter), menu_edition, menu_publication,
+				menu_activite, menu_squelette, menu_administration, menu_configuration 
+		<menu nom="cnde" titre="cnde:cnde_titre" parent="menu_edition"  icone="images/cnde-16.png" />
+		* parents d'onglets... configuration, plugins, statistiques, ... 
+		<onglet nom="cnde" titre="cnde:cnde_titre" parent="configuration" icone="images/cnde-24.png" />
+	-->
+
+
+	<pipeline nom="autoriser" inclure="cnde_autorisations.php" /> 
+
+
+</paquet>
