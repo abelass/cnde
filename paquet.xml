@@ -17,7 +17,7 @@
 
 	<necessite nom="multilingue" compatibilite="[1.0.7;]" />
 	<necessite nom="exergue" compatibilite="[0.1.3;]" />
-	<necessite nom="liens_associes" compatibilite="[1.0.0;]" />
+	<necessite nom="selections_editoriales" compatibilite="[1.7.5;]" />
 	<necessite nom="wsp_ml" compatibilite="[0.2.6;]" />
 	<necessite nom="wsps_html5" compatibilite="[1.2.7;]" />
 	<necessite nom="rang" compatibilite="[0.5.7;]" />
