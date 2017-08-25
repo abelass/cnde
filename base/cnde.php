@@ -39,7 +39,7 @@ function cnde_declarer_champs_extras($champs = array()) {
 			'saisie' => 'oui_non',//Type du champ (voir plugin Saisies)
 			'options' => array(
 				'nom' => 'traduction',
-				'label' => _T('cnde:label_traduction'),
+				'label' => _T('cnde:label_traduction_souhaite'),
 				'sql' => "varchar(2) NOT NULL DEFAULT ''",
 			),
 		)
