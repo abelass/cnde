@@ -9,4 +9,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'cnde_titre' => 'Squelettes CNDE',
+
+	// L
+	'label_fonction' => 'Fonction :',
+	'label_organisation' => 'Organisation :',
+	'label_traduction_souhaite' => 'Traduction souhaitée ?'
 );
