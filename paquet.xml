@@ -19,11 +19,13 @@
 	<necessite nom="exergue" compatibilite="[0.1.3;]" />
 	<necessite nom="selections_editoriales" compatibilite="[1.7.5;]" />
 	<necessite nom="wsp_ml" compatibilite="[0.2.6;]" />
-	<necessite nom="wsps_html5" compatibilite="[1.2.7;]" />
+	<necessite nom="theme_jango" compatibilite="[1.0.0;]" />
 	<necessite nom="rang" compatibilite="[0.5.7;]" />
 	<necessite nom="cextras" compatibilite="[3.11.3;]" />
 	<necessite nom="reservation_evenement" compatibilite="[1.25.4;]" />
 	<necessite nom="reservations_champs_extras" compatibilite="[1.0.0;]" />
+
+	<utilise nom="wsps_html5" compatibilite="[2.0.0;]" />
 
 	<!--
 		Exemple de commandes
