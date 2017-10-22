@@ -5,9 +5,9 @@
 		[(#ID_PARENT|!={0}|oui)<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
 		<li>/</li>]
 		<BOUCLE_ariane(HIERARCHIE){id_article}{tout}>
-			[(#ID_PARENT|!={0}|oui)<li><a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></li>
+			[(#ID_PARENT|!={0}|oui)<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE})]</a></li>
 			<li>/</li>]
 		</BOUCLE_ariane>
-		[(#ID_PARENT|!={0}|?{[<li class="c-state_active">(#TITRE|couper{80})]</li>,<li class="c-state_active"><:accueil_site:></li>})]
+		[(#ID_PARENT|!={0}|?{[<li class="c-state_active">(#TITRE_COURT|sinon{#TITRE})]</li>,<li class="c-state_active"><:accueil_site:></li>})]
 	</ul><!--.arbo-->
 </BOUCLE_art>

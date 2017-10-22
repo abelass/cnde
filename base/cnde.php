@@ -45,6 +45,28 @@ function cnde_declarer_champs_extras($champs = array()) {
 		)
 	);
 
+	$champs['spip_articles']= array(
+		'traduction' => array(
+				'saisie' => 'input',//Type du champ (voir plugin Saisies)
+				'options' => array(
+						'nom' => 'titre_court',
+						'label' => _T('cnde:label_titre_court'),
+						'sql' => "varchar(10) NOT NULL DEFAULT ''",
+				),
+			)
+	);
+
+	$champs['spip_rubriques']= array(
+		'traduction' => array(
+				'saisie' => 'input',//Type du champ (voir plugin Saisies)
+				'options' => array(
+						'nom' => 'titre_court',
+						'label' => _T('cnde:label_titre_court'),
+						'sql' => "varchar(10) NOT NULL DEFAULT ''",
+				),
+		)
+	);
+
 	return $champs;
 
 }
