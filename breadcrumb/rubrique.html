@@ -7,11 +7,11 @@
 		<li>/</li>
 		]
 		<BOUCLE_ariane(HIERARCHIE){id_rubrique}{tout}>
-			[(#ID_PARENT|!={0}|oui|et{#ENV{id_rubrique}|!=={#ID_RUBRIQUE}|oui})<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE}|couper{80})]</a></li>
+			[(#ID_PARENT|!={0}|oui|et{#ENV{id_rubrique}|!=={#ID_RUBRIQUE}|oui})<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</a></li>
 			<li>/</li>
 			]
 		</BOUCLE_ariane>
-		[(#ID_PARENT|!={0}|?{[<li class="c-state_active">(#TITRE_COURT|sinon{#TITRE}|couper{80})]</li>,<li class="c-state_active"><:accueil_site:></li>})]
+		[(#ID_PARENT|!={0}|?{[<li class="c-state_active">(#TITRE_COURT|sinon{#TITRE|couper{30}})]</li>,<li class="c-state_active"><:accueil_site:></li>})]
 	</ul><!--.arbo-->
 </B_ariane>
 </BOUCLE_rub>

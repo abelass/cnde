@@ -1,7 +1,7 @@
 <BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}{!par date}{tout}{lang}>
 	<BOUCLE_enfants(RUBRIQUES){id_parent} {par num titre, titre}{tout}>
 	<li class="[(#EXPOSE|oui)c-active ]c-menu-type-classic">
-		<a class="c-link" href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE}|couper{80})]</a>
+		<a class="c-link" href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</a>
 	</li>
 	</BOUCLE_enfants>
 </BOUCLE_nav>
