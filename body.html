@@ -1,0 +1,64 @@
+#SET{titre_breadcrumb,#ENV{titre_breadcrumb,''}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}
+[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
+<body class="c-layout-header-fixed c-layout-header-6-topbar">
+	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+	<!-- BEGIN: HEADER -->
+	<header class="c-layout-header c-layout-header-6 c-navbar-fluid" data-minimize-offset="80">
+		[<div class="c-topbar">
+			(#INCLURE{fond=inclure/topbar_light,brand_topbar=#GET{brand_topbar},env})
+		</div>]
+		[<div class="c-navbar">
+			(#INCLURE{fond=inclure/nav,brand_topbar=#GET{brand_topbar},env})
+		</div>]
+	</header>
+
+	<div class="c-layout-page">
+		<!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-2 -->
+		<div class="c-layout-breadcrumbs-1 c-subtitle c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
+			<div class="container">
+				[(#GET{titre_breadcrumb}|oui)
+				<div class="c-page-title c-pull-left">
+					<h1 class="#EDIT{#ENV{class_crayon,titre}} c-font-uppercase c-font-sbold">#TITRE</h1>
+					[<h2>(#SOUSTITRE)</h2>]
+				</div>]
+				<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
+			</div>
+		</div>
+		<div class="container">
+			<div class="c-layout-sidebar-menu c-theme ">
+				<INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env} />
+			</div>
+			<div class="c-layout-sidebar-content ">
+				<INCLURE{fond=content/#ENV{type-page},titre_breadcrumb=#GET{titre_breadcrumb},env} />
+			</div>
+		</div>
+	</div>
+	<a name="footer"></a>
+	<footer class="c-layout-footer c-layout-footer-3 c-bg-dark">
+		<INCLURE{fond=footer/#ENV{type-page},env} />
+	</div>
+	<div class="c-layout-go2top">
+	<i class="icon-arrow-up"></i>
+</div><!-- END: LAYOUT/FOOTERS/GO2TOP -->
+
+	[(#REM)<!-- BEGIN: CART MENU -->
+		<INCLURE{fond=inclure/panier,env} />
+	<!-- END: CART MENU -->]
+
+	<INCLURE{fond=inclure/quick_sidebar,env} />
+	<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+
+		<!-- Modal -->
+	<div class="modal" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content c-square">
+				<div class="modal-header c-no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<INCLURE{fond=inclure/scripts} />
+
+</body>

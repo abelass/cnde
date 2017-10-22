@@ -1,11 +1,6 @@
 <div class="container">
-	[(#ENV{brand_topbar}|non)
-	<INCLURE{fond=inclure/inline_nav,env} />
-	]
-	[(#ENV{brand_topbar}|oui)
-	<INCLURE{fond=inclure/inline_nav,env} />
 	<div class="c-brand">
 		<INCLURE{fond=inclure/brand,lang} />
 	</div>
-	]
+	<INCLURE{fond=inclure/inline_nav,env} />
 </div>

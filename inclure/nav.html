@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="c-navbar-wrapper clearfix">
+		[(#ENV{brand_topbar}|non)
+		<div class="c-brand c-pull-left">
+			<INCLURE{fond=inclure/brand} />
+		</div>
+		]
+		<div class="c-quick-search">
+			#FORMULAIRE_RECHERCHE
+		</div>
+		[(#CONFIG{wsps_html5/menu_barre_nav}|?{
+			#SET{menu,#CONFIG{wsps_html5/menu_barre_nav}}
+			,
+			#SET{menu,#CONFIG{wsps_html5/menu_secteurs}}
+		})]
+		<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-bold">
+			<ul class="nav navbar-nav c-theme-nav">
+				<INCLURE{fond=barre_nav/#GET{menu},env}/>
+				<li class="c-quick-sidebar-toggler-wrapper">
+					<a href="#" class="c-quick-sidebar-toggler">
+						<span class="c-line"></span>
+						<span class="c-line"></span>
+						<span class="c-line"></span>
+					</a>
+				</li>
+				<li class="c-search-toggler-wrapper">
+					<a  href="#" class="c-btn-icon c-search-toggler"><i class="fa fa-search"></i></a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+<!-- END: CART MENU --><!-- END: LAYOUT/HEADERS/QUICK-CART -->
+</div>
