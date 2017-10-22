@@ -1,0 +1,13 @@
+<BOUCLE_art(ARTICLES){id_article}{tout}>
+	[(#REM) Fil d'Ariane ]
+	<ul class="#ENV{class,c-page-breadcrumbs c-theme-nav c-pull-left c-fonts-regular}">
+		<li class="c-font-uppercase"><:cnde:vous_ici:></li>
+		[(#ID_PARENT|!={0}|oui)<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+		<li>/</li>]
+		<BOUCLE_ariane(HIERARCHIE){id_article}{tout}>
+			[(#ID_PARENT|!={0}|oui)<li><a href="#URL_RUBRIQUE">[(#TITRE|couper{80})]</a></li>
+			<li>/</li>]
+		</BOUCLE_ariane>
+		[(#ID_PARENT|!={0}|?{[<li class="c-state_active">(#TITRE|couper{80})]</li>,<li class="c-state_active"><:accueil_site:></li>})]
+	</ul><!--.arbo-->
+</BOUCLE_art>

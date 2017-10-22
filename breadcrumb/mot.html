@@ -1,0 +1,14 @@
+<BOUCLE_content(MOTS) {id_mot} {doublons}>
+<ul class="#ENV{class,c-page-breadcrumbs c-theme-nav c-pull-left c-fonts-regular}">
+	<li class="c-font-uppercase"><:cnde:vous_ici:></li>
+	<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+	<li>/</li>
+	<li><span><:mots_clefs:></span></li>
+	<li>/</li>
+	<BOUCLE_ariane(GROUPES_MOTS){id_groupe}>
+		<li><span>[(#TITRE|couper{80})]</span></li>
+		<li>/</li>
+	</BOUCLE_ariane>
+	<li class="c-state_active"><span>[(#TITRE|couper{80})]</span></li>
+</ul>
+</BOUCLE_content>

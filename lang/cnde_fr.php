@@ -13,5 +13,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'label_fonction' => 'Fonction :',
 	'label_organisation' => 'Organisation :',
-	'label_traduction_souhaite' => 'Traduction souhaitée ?'
+	'label_traduction_souhaite' => 'Traduction souhaitée ?',
+
+	// V
+	'vous_ici' => 'Vous êtes ici :',
 );
