@@ -5,6 +5,15 @@ body {
 	font-family: Arial;
 }
 
+h1 {
+	color: $couleur_principale;
+	font-size: 32px;
+}
+
+.c-layout-sidebar-content .spip_logo {
+	margin-bottom: 30px;
+}
+
 .c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
 	margin-top: 263px;
 }

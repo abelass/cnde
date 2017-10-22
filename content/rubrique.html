@@ -1,12 +1,14 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
-
 	<header class="cartouche">
-		[(#LOGO_RUBRIQUE|image_reduire{200,200})]
 		<h1 class="#EDIT{titre}">#TITRE</h1>
-	</header>
+	</header
 
 	<div class="main">
+	[(#LOGO_RUBRIQUE
+		|image_passe_partout{#ENV{width,958},#ENV{height,420}}
+		|image_recadre{#ENV{width,958},#ENV{height,420}}
+		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env})]
 		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
