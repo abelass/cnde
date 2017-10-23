@@ -98,3 +98,41 @@ h1 {
 	font-weight: bold;
 	color: #000000;
 }
+
+/* Footer */
+.c-layout-footer.c-layout-footer-3 {
+	.c-prefooter {
+		.c-content-title-1 > h3 {
+			font-size: 14px;
+			color: #a3a3a3;
+		}
+		.c-container {
+			.c-links > li {
+				padding: 0;
+				border-bottom: none;
+				> a{
+					color: #ffffff;
+					font-size:13px;
+					line-height: 16px;
+				}
+			}
+			.c-address {
+				color: #ffffff;
+				font-size:13px;
+				line-height: 16px;
+			}
+		}
+	}
+	.c-postfooter {
+		background:#ffffff ;
+		.c-divider {
+			color: #afa3a3;
+			margin: 0 6px;
+		}
+	}
+}
+
+.c-layout-footer a {
+	color: #afa3a3;
+}
+

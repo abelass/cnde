@@ -1,0 +1,70 @@
+<div class="c-prefooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"> </div>
+			<div class="col-md-2">
+				<div class="c-container c-first">
+				<BOUCLE_a_propos(RUBRIQUES){id_trad=1}{lang}{tout}>
+					<div class="c-content-title-1">
+						<h3 class="c-font-uppercase">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</h3>
+						<div class="c-line-left hide"></div>
+					</div>
+					<ul class="c-links">
+						<BOUCLE_sr_propos(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}>
+							<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</a></li>
+						</BOUCLE_sr_propos>
+					</ul>
+				</BOUCLE_a_propos>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="c-container">
+				<BOUCLE_projets(RUBRIQUES){id_trad=17}{lang}{tout}>
+					<div class="c-content-title-1">
+						<h3 class="c-font-uppercase">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</h3>
+						<div class="c-line-left hide"></div>
+					</div>
+					<ul class="c-links">
+						<BOUCLE_sr_projets(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}>
+							<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</a></li>
+						</BOUCLE_sr_projets>
+					</ul>
+				</BOUCLE_projets>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="c-container">
+					<div class="c-content-title-1">
+						<h3 class="c-font-uppercase"><:cnde:contactez_nous:></h3>
+						<div class="c-line-left hide"></div>
+						<p></p>
+						<p></p>
+					</div>
+					<p class="c-address">
+						#IDENTITE_ADRESSE<br>
+						#IDENTITE_CODE_POSTAL #IDENTITE_VILLE <br>
+						<:cnde:label_telephone:> #IDENTITE_TELEPHONE <br>
+						<:cnde:label_email:> #EMAIL_WEBMASTER<br>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="c-container">
+					<a class="btn btn-sm c-btn-white c-btn-square c-btn-border-1x" href="">Travaillez à la CNDE</a>
+				</div>
+			</div>
+		<div class="col-md-2"> </div>
+		</div>
+	</div>
+</div>
+
+<div class="c-postfooter">
+	<div class="container c-center">
+		<p >
+			<a rel="contents" href="#URL_PAGE{plan}"><:plan_site:></a>
+			<span class="c-divider">|</span> <a rel="contents" href="#URL_PAGE{plan}">Mentions légales</a>
+			<span class="c-divider">|</span> <a rel="contents" href="#URL_PAGE{plan}">Accès membres</a>
+		</p>
+		[(#CHEMIN{images/cnde-logo-trsp-horizontal-notext-#LANG.png}|image_reduire{84})]
+	</div>
+</div>

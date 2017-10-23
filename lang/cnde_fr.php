@@ -11,9 +11,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'cnde_titre' => 'Squelettes CNDE',
 
 	// L
+	'label_email' => 'Email :',
 	'label_fonction' => 'Fonction :',
 	'label_organisation' => 'Organisation :',
 	'label_titre_court' => 'Titre court :',
+	'label_telephone' => 'Téléphone :',
 	'label_traduction_souhaite' => 'Traduction souhaitée ?',
 
 	// V
