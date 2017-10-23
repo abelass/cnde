@@ -14,30 +14,13 @@ h1 {
 	margin-bottom: 30px;
 }
 
-.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
-	margin-top: 263px;
-}
-
 .c-layout-header.c-layout-header-6 {
 	/*Top bar */
 	.c-topbar {
 		padding: 0;
-		.container {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.c-top-menu.c-pull-right {
-			float:none;
-		}
-		.c-top-menu {
-			float:none;
-			margin: 0;
-		}
+
 		// Brand
 		.c-brand {
-			margin: 0 calc(100% - 466px) 0 0px;
-			padding: 0;
 			> .c-logo::after {
 				display: none;
 			}
@@ -136,3 +119,29 @@ h1 {
 	color: #afa3a3;
 }
 
+@media (min-width: 1200px) {
+	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
+		margin-top: 263px;
+	}
+	.c-layout-header.c-layout-header-6 {
+		/*Top bar */
+		.c-topbar {
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.c-top-menu.c-pull-right {
+				float:none;
+			}
+			.c-top-menu {
+				float:none;
+				margin: 0;
+			}
+			.c-brand {
+				margin: 0 calc(100% - 466px) 0 0px;
+				padding: 0;
+			}
+		}
+	}
+}
