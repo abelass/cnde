@@ -1,8 +1,10 @@
+@import 'css/variables';
 @import 'css/jango_variables';
 
 /* Générale */
 body {
 	font-family: Arial;
+	color: #4f4f4f;
 }
 
 h1 {
@@ -119,7 +121,14 @@ h1 {
 	color: #afa3a3;
 }
 
-@media (min-width: 1200px) {
+/* Menus sousrubriques */
+.c-layout-sidebar-content .menu {
+	.d-xs-flex, .d-sm-flex, .d-md-flex, .d-lg-flex {
+		margin: 0 -15px;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
 	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
 		margin-top: 263px;
 	}
@@ -145,3 +154,4 @@ h1 {
 		}
 	}
 }
+

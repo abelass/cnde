@@ -17,6 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_titre_court' => 'Titre court :',
 	'label_telephone' => 'Téléphone :',
 	'label_traduction_souhaite' => 'Traduction souhaitée ?',
+	'lire_suite' => 'Lire la suite',
 
 	// V
 	'vous_ici' => 'Vous êtes ici :',

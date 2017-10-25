@@ -2,7 +2,7 @@
 <section>
 	<header class="cartouche">
 		<h1 class="#EDIT{titre}">#TITRE</h1>
-	</header
+	</header>
 
 	<div class="main">
 	[(#LOGO_RUBRIQUE
@@ -15,16 +15,12 @@
 
 		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE}/>
 
-		<B_articles>
-		<br class="nettoyeur"/>
-		<BOUCLE_articles(ARTICLES){id_rubrique}{0,1}>
-			<div class="liste articles">
-				<INCLURE{fond=liste/articles-resume,env,ajax,titre=<:articles_rubrique:>} />
-			</div>
-		</BOUCLE_articles>
 	</div>
 
 	<aside>
+		<INCLURE{fond=inclure/articles_rubriques_enfants_complet,
+			class_row=d-sm-flex flex-wrap align-items-stretch,
+			env} />
 		[(#REM) Gestion du portfolio et des documents ]
 		[(#INCLURE{fond=inclure/documents,id_rubrique})]
 
