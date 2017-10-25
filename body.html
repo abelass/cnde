@@ -1,5 +1,5 @@
 #SET{titre_breadcrumb,#ENV{titre_breadcrumb,''}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}
-[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
+[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}] #SET{quick_sidebar,#INCLURE{fond=inclure/quick_sidebar,env}}
 <body class="c-layout-header-fixed c-layout-header-6-topbar">
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
 	<!-- BEGIN: HEADER -->
@@ -8,7 +8,7 @@
 			(#INCLURE{fond=inclure/topbar_light,brand_topbar=#GET{brand_topbar},env})
 		</div>]
 		[<div class="c-navbar">
-			(#INCLURE{fond=inclure/nav,brand_topbar=#GET{brand_topbar},env})
+			(#INCLURE{fond=inclure/nav,brand_topbar=#GET{brand_topbar}, quick_sidebar=#GET{quick_sidebar},env})
 		</div>]
 	</header>
 
@@ -45,8 +45,9 @@
 		<INCLURE{fond=inclure/panier,env} />
 	<!-- END: CART MENU -->]
 
-	<INCLURE{fond=inclure/quick_sidebar,env} />
+	[(#GET{quick_sidebar,env})
 	<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+	]
 
 		<!-- Modal -->
 	<div class="modal" id="myModal" role="dialog">

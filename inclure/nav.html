@@ -14,13 +14,14 @@
 		<nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-bold">
 			<ul class="nav navbar-nav c-theme-nav">
 				<INCLURE{fond=barre_nav/#GET{menu},env}/>
+				[(#ENV{quick_sidebar}|oui)
 				<li class="c-quick-sidebar-toggler-wrapper">
 					<a href="#" class="c-quick-sidebar-toggler">
 						<span class="c-line"></span>
 						<span class="c-line"></span>
 						<span class="c-line"></span>
 					</a>
-				</li>
+				</li>]
 				<li class="c-search-toggler-wrapper">
 					<a  href="#" class="c-btn-icon c-search-toggler"><i class="fa fa-search"></i></a>
 				</li>
