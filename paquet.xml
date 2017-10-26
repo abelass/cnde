@@ -30,6 +30,6 @@
 
 	<pipeline nom="declarer_champs_extras" inclure="base/cnde.php" />
 	<pipeline nom="autoriser" inclure="cnde_autorisations.php" />
-
+	<pipeline nom="insert_head" inclure="cnde_pipelines.php" />
 
 </paquet>

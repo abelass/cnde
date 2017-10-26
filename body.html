@@ -11,9 +11,20 @@
 			(#INCLURE{fond=inclure/nav,brand_topbar=#GET{brand_topbar}, quick_sidebar=#GET{quick_sidebar},env})
 		</div>]
 	</header>
-
+		[(#COMPOSITION|in_array{#LISTE{home}}|oui)
+			<INCLURE{fond=modeles/articles_logo_owl,
+				items=1,
+				id-carousel=slider_activites,
+				margins=0,
+				lazyLoad=true,
+				dots=false,
+				autoplay=true,
+				autoplayHoverPause=true,
+				id_rubrique} />
+		]
 	<div class="c-layout-page">
 		<!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-2 -->
+		[(#COMPOSITION|in_array{#LISTE{home}}|non)
 		<div class="c-layout-breadcrumbs-1 c-subtitle c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
 			<div class="container">
 				[(#GET{titre_breadcrumb}|oui)
@@ -22,12 +33,13 @@
 					[<h2>(#SOUSTITRE)</h2>]
 				</div>]
 				<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
+
 			</div>
-		</div>
+		</div>]
 		<div class="container">
-			<div class="c-layout-sidebar-menu c-theme ">
-				<INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env} />
-			</div>
+			[<div class="c-layout-sidebar-menu c-theme ">
+				(#INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env})
+			</div>]
 			<div class="c-layout-sidebar-content ">
 				<INCLURE{fond=content/#ENV{type-page},titre_breadcrumb=#GET{titre_breadcrumb},env} />
 			</div>

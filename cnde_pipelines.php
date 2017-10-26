@@ -14,8 +14,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 
-/*
- * Un fichier de pipelines permet de regrouper
- * les fonctions de branchement de votre plugin
- * sur des pipelines existants.
- */
+function cnde_insert_head($flux){
+	$flux .= recuperer_fond('head/scripts');
+	return $flux;
+}

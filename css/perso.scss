@@ -128,9 +128,15 @@ h1 {
 	}
 }
 
-@media (min-width: @screen-lg-min) {
-	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page {
+
+
+
+@media (min-width: $screen-md-min+1) {
+	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page{
 		margin-top: 263px;
+	}
+#slider_activites	{
+		margin-top: 253px;
 	}
 	.c-layout-header.c-layout-header-6 {
 		/*Top bar */
