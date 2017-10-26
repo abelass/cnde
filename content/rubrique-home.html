@@ -1,6 +1,6 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
 <section>
-	<header class="hidden">
+	<header>
 		<h1  class="#EDIT{titre}">#TITRE</h1>
 	</header>
 
@@ -8,10 +8,12 @@
 
 	[(#INCLURE{fond=inclure/outils,env})]
 		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-
-
+		<BOUCLE_a_propos(RUBRIQUES) {id_trad=1}{lang} {tout}>
+			<a class="btn btn-xlg c-btn-fuchsia c-font-bold" href="#URL_RUBRIQUE">
+				<:cnde:decouvrez_cnde:>
+			</a>
+		</BOUCLE_a_propos>
 		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE}/>
-
 	</div>
 
 	<footer>

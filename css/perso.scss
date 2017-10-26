@@ -7,9 +7,24 @@ body {
 	color: #4f4f4f;
 }
 
+h1,
+h2 {
+	font-weight: bold;
+}
+
 h1 {
 	color: $couleur_principale;
 	font-size: 32px;
+}
+
+h2::before {
+	content: url(images/cnde-logo-blocs-couleur-38_25.png);
+}
+.h2 {
+	padding-left: 45px;
+	text-align:center;
+	overflow: hidden;
+	text-transform: uppercase;
 }
 
 .c-layout-sidebar-content .spip_logo {
@@ -30,7 +45,7 @@ h1 {
 	}
 	// Main navigation
 	.c-navbar {
-		background-color: #BD0074;
+		background-color: $fuchsia;
 		.c-theme-nav li.c-active > a:not(.btn) {
 			color: #ffffff!important;
 		}
@@ -60,7 +75,7 @@ h1 {
 						}
 					}
 					> .c-link {
-						background-color: #BD0074;
+						background-color: $fuchsia;
 						font-size: 18px;
 						padding: 29px 25px 29px 25px;
 						min-height: 78px;
@@ -128,14 +143,55 @@ h1 {
 	}
 }
 
+.c-btn-fuchsia {
+	border-color: $fuchsia;
+	border-width: 1px;
+	color: #ffffff;
+	background: $fuchsia;
+}
 
+.c-btn-fuchsia.btn-no-focus:hover,
+.c-btn-fuchsia:hover,
+.c-btn-fuchsia.btn-no-focus:active,
+.c-btn-fuchsia:active,
+.c-btn-fuchsia.active,
+.open > .c-btn-fuchsia.dropdown-toggle {
+	color: #ffffff;
+	background: $fuchsia_darker;
+	border-color: $fuchsia_darker;
+}
 
+/* Rubrique Home */
+.rubrique_home {
+	.c-layout-sidebar-content {
+		header, .main {
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	/* Rubrique Home */
+	.rubrique_home {
+		.c-layout-sidebar-content {
+			header, .main {
+				width: 70%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
 
 @media (min-width: $screen-md-min+1) {
 	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page{
 		margin-top: 263px;
 	}
-#slider_activites	{
+
+	.rubrique_home .c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page{
+		margin-top: 0;
+	}
+
+	body:not(.c-page-on-scroll) #slider_activites	{
 		margin-top: 253px;
 	}
 	.c-layout-header.c-layout-header-6 {
