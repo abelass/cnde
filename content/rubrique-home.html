@@ -13,8 +13,23 @@
 				<:cnde:decouvrez_cnde:>
 			</a>
 		</BOUCLE_a_propos>
-		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE}/>
+
 	</div>
+	<aside>
+		<div class="faits_cles">
+			<h2><:cnde:faits_cles:></h2>
+			<INCLURE{fond=modeles/selection_owl,
+				height=400,
+				items=1,
+				id-carousel=faits_cle,
+				margins=0,
+				lazyLoad=true,
+				dots=false,
+				autoplay=true,
+				autoplayHoverPause=true,
+				identifiant=fait_cle} />
+		</div>
+	</aside>
 
 	<footer>
 	[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
