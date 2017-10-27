@@ -1,39 +1,62 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
-<section>
-	<header>
-		<h1  class="#EDIT{titre}">#TITRE</h1>
-	</header>
+	<INCLURE{fond=modeles/articles_logo_owl,
+		height=400,
+		items=1,
+		id-carousel=slider_activites,
+		margins=0,
+		lazyLoad=true,
+		dots=false,
+		autoplay=true,
+		autoplayHoverPause=true,
+		id_rubrique} />
+	<section>
+		<header class="container">
+			<h1 class="#EDIT{titre}">#TITRE</h1>
+		</header>
 
-	<div class="main">
+		<div class="main container">
 
-	[(#INCLURE{fond=inclure/outils,env})]
-		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
-		<BOUCLE_a_propos(RUBRIQUES) {id_trad=1}{lang} {tout}>
-			<a class="btn btn-xlg c-btn-fuchsia c-font-bold" href="#URL_RUBRIQUE">
-				<:cnde:decouvrez_cnde:>
-			</a>
-		</BOUCLE_a_propos>
+		[(#INCLURE{fond=inclure/outils,env})]
+			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+			<BOUCLE_a_propos(RUBRIQUES) {id_trad=1}{lang} {tout}>
+				<a class="btn btn-xlg c-btn-fuchsia c-font-bold" href="#URL_RUBRIQUE">
+					<:cnde:decouvrez_cnde:>
+				</a>
+			</BOUCLE_a_propos>
 
-	</div>
-	<aside>
-		<div class="faits_cles">
-			<h2><:cnde:faits_cles:></h2>
-			<INCLURE{fond=modeles/selection_owl,
-				height=400,
-				items=1,
-				id-carousel=faits_cle,
-				margins=0,
-				lazyLoad=true,
-				dots=false,
-				autoplay=true,
-				autoplayHoverPause=true,
-				identifiant=fait_cle} />
 		</div>
-	</aside>
+		<aside>
+			<div class="faits_cles section">
+				<div class="container">
+					<h2><:cnde:faits_cles:></h2>
+					<INCLURE{fond=modeles/selection_owl,
+						loop=false,
+						height=200,
+						width=300,
+						items=4,
+						id-carousel=faits_cle,
+						margin=1,
+						lazyLoad=true,
+						dots=false,
+						autoplay=false
+						autoplayHoverPause=true,
+						identifiant=faits_cle} />
+				</div>
+			</div>
+			<div class="highlights section">
+				<div class="container">
+					<h2>titre à définir</h2>
+					<INCLURE{fond=inclure/highlights,
+						identifiant=highlights,
+						class_item=highlight col-md-4,
+						class_bouton=btn c-btn-uppercase c-btn-white c-btn-bold c-btn-border-1x} />
+				</div>
+			</div>
+		</aside>
 
-	<footer>
-	[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
-	</footer>
+		<footer>
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+		</footer>
 
-</section>
+	</section>
 </BOUCLE_content>
