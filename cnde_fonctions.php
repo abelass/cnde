@@ -12,6 +12,7 @@
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
+
 /**
  * Affiche un text avec liens vers traductions si pas de texte.
  *
