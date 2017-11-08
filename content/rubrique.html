@@ -12,7 +12,7 @@
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env})]
 		[<div class="#EDIT{texte} texte">(#TEXTE|traductions_diponibles{rubrique, #ID_TRAD, #LANG})</div>]
-		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE}/>
+		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE,env}/>
 	</div>
 
 	<aside>
