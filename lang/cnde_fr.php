@@ -25,6 +25,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'label_traduction_souhaite' => 'Traduction souhaitée ?',
 	'lire_suite' => 'Lire la suite',
 
+	// T
+	'traductions_disponibles' => 'Désolé cette page n\'est pas traduite pour le moment, elle est diponible en : @traductions@.',
+
 	// V
 	'vous_ici' => 'Vous êtes ici :',
 );

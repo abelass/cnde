@@ -17,7 +17,7 @@
 		<div class="main container">
 
 		[(#INCLURE{fond=inclure/outils,env})]
-			[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+			[<div class="#EDIT{texte} texte">(#TEXTE|traductions_diponibles{rubrique, #ID_TRAD, #LANG})</div>]
 			<BOUCLE_a_propos(RUBRIQUES) {id_trad=1}{lang} {tout}>
 				<a class="btn btn-xlg c-btn-fuchsia c-font-bold" href="#URL_RUBRIQUE">
 					<:cnde:decouvrez_cnde:>

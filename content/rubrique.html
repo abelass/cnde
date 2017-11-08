@@ -11,7 +11,7 @@
 		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env})]
-		[<div class="#EDIT{texte} texte">(#TEXTE)</div>]
+		[<div class="#EDIT{texte} texte">(#TEXTE|traductions_diponibles{rubrique, #ID_TRAD, #LANG})</div>]
 		<INCLURE{fond=modeles/formulaires_reservation,objet=rubrique,id_objet=#ID_RUBRIQUE}/>
 	</div>
 
