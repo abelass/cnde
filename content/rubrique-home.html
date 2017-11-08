@@ -1,5 +1,5 @@
 <BOUCLE_content(RUBRIQUES){id_rubrique}{tout}>
-	<INCLURE{fond=modeles/articles_logo_owl,
+	<INCLURE{fond=inclure/articles_logo_owl_selection,
 		height=400,
 		items=1,
 		id-carousel=slider_activites,
@@ -8,7 +8,7 @@
 		dots=false,
 		autoplay=true,
 		autoplayHoverPause=true,
-		id_rubrique} />
+		identifiant=activites_#LANG} />
 	<section>
 		<header class="container">
 			<h1 class="#EDIT{titre}">#TITRE</h1>
@@ -40,14 +40,14 @@
 						dots=false,
 						autoplay=false
 						autoplayHoverPause=true,
-						identifiant=faits_cle} />
+						identifiant=faits_cle_#LANG} />
 				</div>
 			</div>
 			<div class="highlights section">
 				<div class="container">
 					<h2>titre à définir</h2>
 					<INCLURE{fond=inclure/highlights,
-						identifiant=highlights,
+						identifiant=highlights_#LANG,
 						class_item=highlight col-md-4,
 						class_bouton=btn c-btn-uppercase c-btn-white c-btn-bold c-btn-border-1x} />
 				</div>
