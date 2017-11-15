@@ -28,7 +28,7 @@
 		|image_recadre{#ENV{width,958},#ENV{height,420}}
 		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
 		[<div class="#EDIT{chapo} chapo surlignable">(#CHAPO|image_reduire{500,0})</div>]
-		[<div class="#EDIT{texte} texte surlignable">(#TEXTE|image_reduire{500,0})</div>]
+		[<div class="#EDIT{texte} texte surlignable">(#TEXTE|traductions_diponibles{article, #ID_TRAD, #LANG})</div>]
 		[<p class="#EDIT{hyperlien} hyperlien">
 			<:voir_en_ligne:> : <a href="(#URL_SITE)"
 				class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a>
