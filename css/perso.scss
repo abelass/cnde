@@ -52,10 +52,6 @@ a:focus, a:hover, a:active {
 		}
 	}
 
-
-.c-layout-header .c-topbar .c-top-menu > .c-ext > li.c-lang {
-	margin:0;
-}
 	// Main navigation
 	.c-navbar {
 		background-color: $fuchsia;
@@ -104,6 +100,10 @@ a:focus, a:hover, a:active {
 			}
 		}
 	}
+}
+
+.c-layout-header .c-topbar .c-top-menu > .c-ext > li.c-lang {
+	margin: 0;
 }
 
 /* Breadcrumbs */
