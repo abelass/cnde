@@ -306,6 +306,10 @@ ul.style-arrow {
 }
 
 @media (min-width: $screen-md-min+1) {
+.c-layout-header.c-layout-header-6 .c-topbar .c-top-menu {
+	width: 114px;
+}
+
 	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page{
 		margin-top: 263px;
 	}
