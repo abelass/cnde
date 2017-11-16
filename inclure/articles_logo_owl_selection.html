@@ -57,33 +57,28 @@ Insertion du modele <articleX|owl>
 <script type="text/javascript">
 jQuery(function($){
 	$("[#(#ENV{id-carousel,demo})]").owlCarousel({
-			[loop: (#ENV{loop, true}),][
-			items: (#ENV{items, 1}),][
-			margin:(#ENV{margin}),][
-			dots:(#ENV{dots, true}),][
-			nav:(#ENV{navigation, false}),][
-			autoplay: (#ENV{autoplay}),][
-			autoplayHoverPause: (#ENV{autoplayHoverPause}),][
-			lazyLoad: (#ENV{lazyLoad}),][
-			autoplayTimeout: (#ENV{autoplayTimeout}),][
-			autoHeight: (#ENV{autoHeight}),][
-			center: (#ENV{center}),]
-			responsive:false,
-			URLhashListener:true,
-			startPosition: 'URLHash',
-responsive:{
-	0:{
-	items:1
-	}[,
-	640:{
-	items:(#ENV{items})
-	}]
-}
-	});
-
-	// Gallerie Colorbox
-	$("a.js-colorbox").colorbox({
-			rel:'diaporama#ENV{id-carousel,demo}',
+		[loop: (#ENV{loop, true}),][
+		items: (#ENV{items, 1}),][
+		margin:(#ENV{margin}),][
+		dots:(#ENV{dots, true}),][
+		nav:(#ENV{navigation, false}),][
+		autoplay: (#ENV{autoplay}),][
+		autoplayHoverPause: (#ENV{autoplayHoverPause}),][
+		lazyLoad: (#ENV{lazyLoad}),][
+		autoplayTimeout: (#ENV{autoplayTimeout}),][
+		autoHeight: (#ENV{autoHeight}),][
+		center: (#ENV{center}),]
+		responsive:false,
+		URLhashListener:true,
+		startPosition: 'URLHash',
+		responsive:{
+			0:{
+			items:1
+			}[,
+			640:{
+			items:(#ENV{items})
+			}]
+		}
 	});
 });
 </script>
