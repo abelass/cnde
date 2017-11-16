@@ -54,7 +54,7 @@ h2 {
 			color: #ffffff!important;
 		}
 		.c-menu-type-classic {
-			background-color: #F5F5F5;
+			background-color: $grey;
 		}
 		.c-mega-menu {
 			> .nav.navbar-nav {
@@ -189,6 +189,26 @@ h2 {
 }
 
 
+
+/* Listes */
+
+ul.liste-items {
+	li.item:hover {
+		background-color: $grey;
+	}
+}
+
+ul.style-arrow {
+
+	> li::before{
+		font-family: 'Glyphicons Halflings';
+		margin: 5px 10px 50px 20px;
+		content: "\e092";
+		color:$fuchsia;
+	}
+}
+
+
 /* Rubrique Home */
 .rubrique_home {
 	h2 {
@@ -198,7 +218,7 @@ h2 {
 			text-align: center;
 	}
 	.faits_cles {
-		background-color:#f5f5f5;
+		background-color:$grey;
 	}
 	section {
 		padding-top: 100px;

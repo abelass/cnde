@@ -21,20 +21,8 @@
 			env} />
 		[(#REM) Gestion du portfolio et des documents ]
 		[(#INCLURE{fond=inclure/documents,id_rubrique})]
+		<INCLURE{fond=inclure/related_links,id_rubrique} />
 
-		[(#REM) Breves du secteur ]
-		<B_breves>
-		<div class="liste breves">
-			#ANCRE_PAGINATION
-			<h2 class="h2"><:breves:breves:></h2>
-			<ul class="liste-items">
-			<BOUCLE_breves(BREVES) {id_rubrique} {par date}{inverse} {pagination 5}>
-				<li class="item short">#INCLURE{fond=inclure/resume/breve,id_breve}</li>
-			</BOUCLE_breves>
-			</ul>
-			[<div class="pagination">(#PAGINATION)</div>]
-		</div>
-		</B_breves>
 
 	[(#REM) Sites de la rubrique ]
 	<B_sites>

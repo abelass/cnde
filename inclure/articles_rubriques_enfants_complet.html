@@ -1,0 +1,56 @@
+<B_articles>
+<div class="menu articles">
+	<h2 class="h2">
+		<:articles_rubrique:>
+	</h2>
+	<div class="#ENV{class_row,row}">
+	<BOUCLE_articles(ARTICLES){id_rubrique}>
+		<div class="#ENV{class_item,col-md-4 col-sm-6}">
+			[(#LOGO_ARTICLE
+				|image_passe_partout{#ENV{width,600},#ENV{height,400}}
+				|image_recadre{#ENV{width,600},#ENV{height,400}}
+				|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+				<h3 class="c-font-bold"><a href="#URL_ARTICLE">[(#TITRE)]</a></h3>
+				[<p class="#EDIT{introduction} texte">
+					(#INTRODUCTION|couper{100})
+				</p>]
+				<p>
+					<a class="btn c-theme-btn c-btn-uppercase c-btn-bold c-btn-border-1x" href="#URL_ARTICLE">
+						<:cnde:lire_suite:> <span class="fa fa-long-arrow-right"> </span>
+					</a>
+				</p>
+		</div>
+	</BOUCLE_articles>
+	</div>
+</div>
+</B_articles>
+	[(#REM) Si aucun article, affiche un plan de la rubrique ]
+	<B_sous_rubriques>
+	<div class="menu rubriques">
+		<h2 class="h2">
+			<:sous_rubriques:>
+		</h2>
+		<div class="#ENV{class_row,row}">
+			<BOUCLE_sous_rubriques (RUBRIQUES) {id_parent=#ID_RUBRIQUE} {tout}{par num titre, titre}>
+			<div class="#ENV{class_item,col-md-4 col-sm-6}">
+				<a href="#URL_RUBRIQUE">
+					[(#LOGO_RUBRIQUE
+						|image_passe_partout{#ENV{width,600},#ENV{height,400}}
+						|image_recadre{#ENV{width,600},#ENV{height,400}}
+						|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+				</a>
+				<h3 class="c-font-bold"><a href="#URL_RUBRIQUE">[(#TITRE)]</a></h3>
+				[<p class="#EDIT{introduction} texte">
+					(#INTRODUCTION|couper{100})
+				</p>]
+				<p>
+					<a class="btn c-theme-btn c-btn-uppercase c-btn-bold c-btn-border-1x" href="#URL_RUBRIQUE">
+						<:cnde:lire_suite:> <span class="fa fa-long-arrow-right"> </span>
+					</a>
+				</p>
+			</div>
+			</BOUCLE_sous_rubriques>
+		</div>
+	</div>
+	</B_sous_rubriques>
+<//B_articles>

@@ -1,0 +1,14 @@
+<BOUCLE_selections(SELECTIONS){identifiant?}{id_rubrique?} {0,1}>
+<B_contenus>
+<h2><:cnde:related_links:></h2>
+<ul class="liste-items related_links style-arrow">
+	<BOUCLE_contenus(SELECTIONS_CONTENUS){id_selection?}{par rang}>
+	<li class="item">
+		<a[ title="(#TITRE|attribut_html|couper{80})"] href="#URL_ARTICLE">
+			#TITRE
+		</a>
+	</li>
+	</BOUCLE_contenus>
+</ul>
+<B_contenus>
+</BOUCLE_selections>
