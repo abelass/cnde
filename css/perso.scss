@@ -31,6 +31,10 @@ h2 {
 	font-size: 24px;
 }
 
+a:focus, a:hover, a:active {
+		background-color: $dark_grey;
+}
+
 .c-layout-sidebar-content .spip_logo {
 	margin-bottom: 30px;
 }
@@ -188,8 +192,6 @@ h2 {
 	padding: 0 7px;
 }
 
-
-
 /* Listes */
 
 ul.liste-items {
@@ -207,6 +209,22 @@ ul.style-arrow {
 		color:$fuchsia;
 	}
 }
+
+/* Side menu */
+.c-sidebar-menu {
+	li:hover {
+		background-color: $dark_grey;
+	}
+	ul.c-dropdown-menu {
+		background-color: #ffffff;
+		li {
+			border: 1px solid $grey;
+			border-top: 0px;
+		}
+	}
+}
+
+
 
 
 /* Rubrique Home */
