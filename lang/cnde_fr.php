@@ -1,7 +1,6 @@
 <?php
-// This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-
-if (!defined('_ECRIRE_INC_VERSION')) {
+// This is a SPIP language file -- Ceci est un fichier langue de SPIP
+if (! defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -33,5 +32,5 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'traductions_disponibles' => 'Désolé cette page n\'est pas traduite pour le moment, elle est diponible en : @traductions@.',
 
 	// V
-	'vous_ici' => 'Vous êtes ici :',
+	'vous_ici' => 'Vous êtes ici :'
 );
