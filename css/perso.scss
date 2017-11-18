@@ -307,7 +307,7 @@ ul.style-arrow {
 
 @media (min-width: $screen-md-min+1) {
 .c-layout-header.c-layout-header-6 .c-topbar .c-top-menu {
-	width: 114px;
+	width: 133px;
 }
 
 	.c-layout-header-fixed.c-layout-header-6-topbar .c-layout-page{
@@ -337,7 +337,7 @@ ul.style-arrow {
 				margin: 0;
 			}
 			.c-brand {
-				margin: 0 calc(100% - 466px) 0 0px;
+				margin: 0 calc(100% - (350px + 133px)) 0 0px;
 				padding: 0;
 			}
 		}
