@@ -12,6 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// D
 	'decouvrez_cnde' => 'Découvrez la CNDE',
+	'documents_telecharger' => 'Documents à télécharger',
 
 	// F
 	'faits_cles' => 'Les faits clé',
