@@ -35,6 +35,10 @@ Insertion du modele <articleX|owl>
 		color: #FFF;
 		padding: 5px;
 	}
+
+	[#(#ENV{id-carousel,demo})] .owl-slide > .caption > h3 a {
+		color: #FFF;
+	}
 </style>
 [(#REM) <!-- Diaporama -->]
 <div id="#ENV{id-carousel,demo}" class="owl-carousel owl-theme[ (#ENV{items}|=={1}|oui)owl-single]">
@@ -44,8 +48,8 @@ Insertion du modele <articleX|owl>
 		<div class="owl-slide" data-hash="#ENV{id-carousel,demo}#ID_SELECTIONS_CONTENU">
 			[(#ENV{caption,oui}|=={oui}|oui)
 			<div class="caption[ (#ENV{caption_css})]">[
-				<h3 class="title">(#TITRE)</h3>][
-				<p class="hidden-phone">(#DESCRIPTIF|couper{150,'…'}|textebrut)1</p>]</div>]
+				<h3 class="title"><a href="#URL">(#TITRE)</a></h3>][
+				<p class="hidden-phone">(#DESCRIPTIF|couper{150,'…'}|textebrut)</p>]</div>]
 				<img [(#ENV{lazyLoad}|=={true}|oui)class="owl-lazy" data-]src="[(#GET{logo}
 					|image_passe_partout{#ENV{width,1440},#ENV{height,599}}
 					|image_recadre{#ENV{width,1440},#ENV{height,599}}
