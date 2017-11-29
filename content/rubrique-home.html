@@ -26,10 +26,10 @@
 
 		</div>
 		<aside>
-			<div class="faits_cles section">
-				<div class="container">
-					<h2><:cnde:faits_cles:></h2>
-					<INCLURE{fond=modeles/selection_owl,
+		[<div class="faits_cles section">
+			<div class="container">
+				(#INCLURE{fond=modeles/selection_owl,
+						label=<:cnde:faits_cles:>,
 						loop=false,
 						height=200,
 						width=300,
@@ -40,9 +40,12 @@
 						dots=false,
 						autoplay=false
 						autoplayHoverPause=true,
-						identifiant=faits_cle_#LANG} />
-				</div>
+						identifiant=faits_cle_#LANG})
 			</div>
+		</div>]
+
+
+
 			<div class="highlights section">
 				<div class="container">
 					<h2>titre à définir</h2>

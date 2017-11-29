@@ -15,18 +15,16 @@ Insertion du modele <articleX|owl>
 @param : lazyLoad : true (false par défaut) : ne charge que les images visibles pour optimiser le chargement.
 
 -->]
-
-
-<style>
-[#(#ENV{id-carousel,demo})] .owl-slide > .caption{
-	margin-top:10px;
-	}
-</style>
-
-
 [(#REM) <!-- Diaporama -->]
-<div id="#ENV{id-carousel,demo}" class="owl-carousel owl-theme[ (#ENV{items}|=={1}|oui)owl-single]">
 	<BOUCLE_selections(SELECTIONS){identifiant?}{id_rubrique?}>
+		<B_actualites_contenus>
+		<div id="#ENV{id-carousel,demo}" class="owl-carousel owl-theme[ (#ENV{items}|=={1}|oui)owl-single]">
+			<style>
+			[#(#ENV{id-carousel,demo})] .owl-slide > .caption{
+				margin-top:10px;
+				}
+			</style>
+		[<h2>(#LABEL)</h2>]
 		<BOUCLE_actualites_contenus(SELECTIONS_CONTENUS){id_selection?}{par rang}>
 		#SET{logo,#LOGO_SELECTIONS_CONTENU|extraire_attribut{src}}
 		<div class="owl-slide" data-hash="#ENV{id-carousel,demo}#ID_SELECTIONS_CONTENU">
@@ -47,39 +45,39 @@ Insertion du modele <articleX|owl>
 			</div>
 		</div>
 		</BOUCLE_actualites_contenus>
+			<script type="text/javascript">
+				jQuery(function($){
+					$("[#(#ENV{id-carousel,demo})]").owlCarousel({
+							[loop: (#ENV{loop, true}),][
+							items: (#ENV{items, 1}),][
+							margin:(#ENV{margin}),][
+							dots:(#ENV{dots, true}),][
+							nav:(#ENV{navigation, false}),][
+							autoplay: (#ENV{autoplay}),][
+							autoplayHoverPause: (#ENV{autoplayHoverPause}),][
+							lazyLoad: (#ENV{lazyLoad}),][
+							autoplayTimeout: (#ENV{autoplayTimeout}),][
+							autoHeight: (#ENV{autoHeight}),][
+							center: (#ENV{center}),]
+							responsive:false,
+							URLhashListener:true,
+							startPosition: 'URLHash',
+				responsive:{
+					0:{
+					items:1
+					}[,
+					640:{
+					items:(#ENV{items})
+					}]
+				}
+					});
+
+					// Gallerie Colorbox
+					$("a.js-colorbox").colorbox({
+							rel:'diaporama#ENV{id-carousel,demo}',
+					});
+				});
+				</script>
+			</div>
+		</B_actualites_contenus>
 	</BOUCLE_selections>
-</div>
-
-<script type="text/javascript">
-jQuery(function($){
-	$("[#(#ENV{id-carousel,demo})]").owlCarousel({
-			[loop: (#ENV{loop, true}),][
-			items: (#ENV{items, 1}),][
-			margin:(#ENV{margin}),][
-			dots:(#ENV{dots, true}),][
-			nav:(#ENV{navigation, false}),][
-			autoplay: (#ENV{autoplay}),][
-			autoplayHoverPause: (#ENV{autoplayHoverPause}),][
-			lazyLoad: (#ENV{lazyLoad}),][
-			autoplayTimeout: (#ENV{autoplayTimeout}),][
-			autoHeight: (#ENV{autoHeight}),][
-			center: (#ENV{center}),]
-			responsive:false,
-			URLhashListener:true,
-			startPosition: 'URLHash',
-responsive:{
-	0:{
-	items:1
-	}[,
-	640:{
-	items:(#ENV{items})
-	}]
-}
-	});
-
-	// Gallerie Colorbox
-	$("a.js-colorbox").colorbox({
-			rel:'diaporama#ENV{id-carousel,demo}',
-	});
-});
-</script>
