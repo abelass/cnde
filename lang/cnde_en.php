@@ -11,6 +11,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'cnde_titre' => 'Framework NCRC',
+	'contactez_nous' => 'Contact us',
 
 	// D
 	'decouvrez_cnde' => 'Discover the NCRC',
@@ -25,7 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// L
 	'label_email' => 'Email: ',
 	'label_telephone' => 'Phone : ',
-	'label_traduction_souhaite' => 'Need interpretation? ',
+	'label_traduction_souhaite' => 'Need interpretation?',
 	'lire_suite' => 'Read more',
 
 	// M
