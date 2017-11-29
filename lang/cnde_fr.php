@@ -19,6 +19,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// F
 	'faits_cles' => 'Les faits clé',
 
+	// I
+	'informations_utiles' => 'Informations utiles',
+
 	// L
 	'label_email' => 'Email :',
 	'label_telephone' => 'Téléphone :',
@@ -32,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'related_links' => 'À  lire également',
 
 	// T
-	'traductions_disponibles' => 'Désolé cette page n\'est pas traduite pour le moment, elle est diponible en : @traductions@.',
+	'traductions_disponibles' => 'Désolé, cette page n\’est actuellement pas disponible en français, nous vous invitons à la consulter en : @traductions@.',
 	'travaillez_cnde' => 'Travaillez à la CNDE',
 
 	// V

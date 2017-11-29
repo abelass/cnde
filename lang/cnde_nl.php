@@ -19,6 +19,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// F
 	'faits_cles' => 'In de kijker',
 
+	// I
+	'informations_utiles' => 'Nuttige informatie',
+
 	// L
 	'label_email' => 'Email :',
 	'label_telephone' => 'Telefoonnummer: ',
@@ -32,7 +35,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'related_links' => 'Ook te lezen',
 
 	// T
-	'traductions_disponibles' => 'Onze excuses, deze pagina is voorlopig niet vertaald, ze is beschikbaar in het : @vertaling',
+	'traductions_disponibles' => 'Wij verontschuldigen ons voor het feit dat deze pagina momenteel niet beschikbaar is in het Nederlands. U kunt ze raadplegen in het:  @traductions@',
 	'travaillez_cnde' => 'Werken bij de NCRK',
 
 	// V

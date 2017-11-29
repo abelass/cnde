@@ -50,7 +50,7 @@ function traductions_diponibles($texte, $objet, $id_trad, $lang) {
 			}
 
 			if ($traductions) {
-				$texte = _T('cnde:traductions_disponibles', ['traductions' => $traductions]);
+				$texte = '<p>' . _T('cnde:traductions_disponibles', ['traductions' => $traductions]) . '</p>';
 			}
 		}
 	}
