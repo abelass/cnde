@@ -41,9 +41,9 @@
 						<p></p>
 					</div>
 					<p class="c-address">
-						#IDENTITE_ADRESSE<br>
-						#IDENTITE_CODE_POSTAL #IDENTITE_VILLE <br>
-						<:cnde:label_telephone:> #IDENTITE_TELEPHONE <br>
+						[(#IDENTITE_ADRESSE|extraire_multi)]<br>
+						[(#IDENTITE_CODE_POSTAL|extraire_multi)] [(#IDENTITE_VILLE|extraire_multi)]<br>
+						<:cnde:label_telephone:> [(#IDENTITE_TELEPHONE|extraire_multi)] <br>
 						<:cnde:label_email:> #EMAIL_WEBMASTER<br>
 					</p>
 				</div>
