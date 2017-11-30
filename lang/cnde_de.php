@@ -14,14 +14,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'contactez_nous' => 'Contactez nous',
 
 	// D
-	'decouvrez_cnde' => 'Découvrez la CNDE',
+	'decouvrez_cnde' => 'Entdecken Sie die NKRK',
 	'documents_telecharger' => 'Documents à télécharger',
 
 	// F
 	'faits_cles' => 'Les faits clé',
 
 	// I
-	'informations_utiles' => 'Informations utiles',
+	'informations_utiles' => 'Nützliche Informationen',
 
 	// L
 	'label_email' => 'Email :',
