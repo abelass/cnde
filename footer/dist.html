@@ -4,13 +4,13 @@
 			<div class="col-md-2"> </div>
 			<div class="col-md-2 col-sm-3">
 				<div class="c-container c-first">
-				<BOUCLE_a_propos(RUBRIQUES){id_trad=1}{lang}{tout}>
+				<BOUCLE_a_propos(RUBRIQUES){id_trad=1}{lang}{tout}{par num titre}>
 					<div class="c-content-title-1">
 						<h3 class="c-font-uppercase">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</h3>
 						<div class="c-line-left hide"></div>
 					</div>
 					<ul class="c-links">
-						<BOUCLE_sr_propos(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}>
+						<BOUCLE_sr_propos(RUBRIQUES){id_parent=#ID_RUBRIQUE}{tout}{par num titre}>
 							<li><a href="#URL_RUBRIQUE">[(#TITRE_COURT|sinon{#TITRE|couper{30}})]</a></li>
 						</BOUCLE_sr_propos>
 					</ul>
