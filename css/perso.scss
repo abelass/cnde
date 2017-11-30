@@ -283,15 +283,21 @@ ul.style-arrow {
 	.section {
 		padding: 70px 0;
 	}
-	.highlight {
-		h3 {
-			color: #ffffff;
+	.highlights {
+		.highlight {
+			h3 {
+				color: #ffffff;
+			}
+			.content {
+				white-space: normal;
+				text-align: left;
+			}
 		}
-		> .btn {
-			white-space: normal;
-			text-align: left;
+		.btn + .btn {
+			margin-left: 30px;
 		}
 	}
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
