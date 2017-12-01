@@ -11,34 +11,32 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// C
 	'cnde_titre' => 'Squelettes CNDE',
-	'contactez_nous' => 'Contactez nous',
 
 	// D
 	'decouvrez_cnde' => 'Entdecken Sie die NKRK',
-	'documents_telecharger' => 'Documents à télécharger',
+	'documents_telecharger' => 'Dokumente zum Herunterladen',
 
 	// F
-	'faits_cles' => 'Les faits clé',
+	'faits_cles' => 'Wichtige Fakten',
 
 	// I
 	'informations_utiles' => 'Nützliche Informationen',
 
 	// L
 	'label_email' => 'Email :',
-	'label_telephone' => 'Téléphone :',
-	'label_traduction_souhaite' => 'Traduction souhaitée ?',
-	'lire_suite' => 'Lire la suite',
+	'label_telephone' => 'Telephon:',
+	'lire_suite' => 'Lesen Sie mehr',
 
 	// M
 	'mentions_legales' => 'Mentions légales',
 
 	// R
-	'related_links' => 'À  lire également',
+	'related_links' => 'À lire également',
 
 	// T
 	'traductions_disponibles' => 'Entschuldigung, diese Seite ist derzeit nicht auf Deutsch  verfügbar. Erhältliche Übersetzungen : @traductions@.',
 	'travaillez_cnde' => 'Arbeiten in der NKRK',
 
 	// V
-	'vous_ici' => 'Vous êtes ici :'
+	'vous_ici' => 'Sie sind hier:'
 );
