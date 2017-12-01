@@ -34,7 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'related_links' => 'À lire également',
 
 	// T
-	'traductions_disponibles' => 'Entschuldigung, diese Seite ist derzeit nicht auf Deutsch  verfügbar. Erhältliche Übersetzungen : @traductions@.',
+	'traductions_disponibles' => 'Entschuldigung, diese Seite ist derzeit nicht auf Deutsch verfügbar. Erhältliche Übersetzungen : @traductions@.',
 	'travaillez_cnde' => 'Arbeiten in der NKRK',
 
 	// V
