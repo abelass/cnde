@@ -37,7 +37,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'traductions_disponibles' => 'Apologies, this page is currently not available in English. You can consult it in: @traductions@',
-	'travaillez_cnde' => 'A job at the NCRC',
 
 	// V
 	'vous_ici' => 'You are here:'

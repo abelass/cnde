@@ -37,7 +37,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// T
 	'traductions_disponibles' => 'Wij verontschuldigen ons voor het feit dat deze pagina momenteel niet beschikbaar is in het Nederlands. U kunt ze raadplegen in het:  @traductions@',
-	'travaillez_cnde' => 'Werken bij de NCRK',
 
 	// V
 	'vous_ici' => 'U bevindt zich hier:'
