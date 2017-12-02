@@ -1,5 +1,6 @@
 /* Couleurs  */
 $couleur_principale: #00ADD0;
+$couleur_principale_darker: darken($couleur_principale, 6.5%);
 $fuchsia:#bd0074;
 $fuchsia_darker: darken($fuchsia, 6.5%);
 $green_fluo:#7ab800;
