@@ -5,10 +5,9 @@
 	</header>
 
 	<div class="main">
-	[(#LOGO_RUBRIQUE
-		|image_passe_partout{#ENV{width,958},#ENV{height,420}}
-		|image_recadre{#ENV{width,958},#ENV{height,420}}
-		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+	[<div class="logo[ color-(#BACKGROUND_LOGO)]">(#LOGO_RUBRIQUE
+		|image_reduire{#ENV{width,958},#ENV{height,157}}
+		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})</div>]
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env})]
 		[<div class="#EDIT{texte} texte">(#TEXTE|traductions_diponibles{rubrique, #ID_TRAD, #LANG})</div>]

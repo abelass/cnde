@@ -23,10 +23,10 @@
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env,titre,introduction=[(#INTRODUCTION|textebrut)],url=#URL_ARTICLE})]
 	<div class="main">
-		[(#LOGO_ARTICLE
+		[<div class="logo[ color-(#BACKGROUND_LOGO)]">(#LOGO_ARTICLE
 		|image_passe_partout{#ENV{width,958},#ENV{height,420}}
 		|image_recadre{#ENV{width,958},#ENV{height,420}}
-		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+		|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})</div>]
 		[<div class="#EDIT{chapo} chapo surlignable">(#CHAPO|image_reduire{500,0})</div>]
 		[<div class="#EDIT{texte} texte surlignable">(#TEXTE|traductions_diponibles{article, #ID_TRAD, #LANG})</div>]
 		[<p class="#EDIT{hyperlien} hyperlien">

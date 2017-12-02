@@ -42,9 +42,46 @@ a:focus, a:hover, a:active {
 		background-color: $dark_grey;
 }
 
-.c-layout-sidebar-content .spip_logo {
+/* Gestion logos */
+
+.logo {
+	background-color: #386A7E;
 	margin-bottom: 30px;
 }
+
+.logo.color-7AB800 {
+	background-color: #7AB800
+}
+
+.logo.color-578301 {
+	background-color: #578301
+}
+
+.logo.color-00ADD0 {
+	background-color : #00ADD0
+}
+
+.logo.color-02738a {
+	background-color: #02738a
+}
+
+.logo.color-C50084 {
+	background-color: #C50084
+}
+
+.logo.color-8d0b62 {
+	background-color: #8d0b62
+}
+
+.logo.color-565A5C {
+	background-color: #565A5C
+}
+
+
+
+
+
+
 
 .c-layout-header.c-layout-header-6 {
 	/*Top bar */
