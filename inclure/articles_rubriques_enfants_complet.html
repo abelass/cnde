@@ -6,8 +6,8 @@
 	<div class="#ENV{class_row,row}">
 	<BOUCLE_articles(ARTICLES){id_rubrique}>
 		<div class="#ENV{class_item,col-md-4 col-sm-6}">
-		
-			[<div class="logo[ color-(#BACKGROUND_LOGO)]">(#LOGO_ARTICLE
+
+			[<div class="logo[ background-color color-(#BACKGROUND_LOGO)]">(#LOGO_ARTICLE
 				|image_passe_partout{#ENV{width,600},#ENV{height,400}}
 				|image_recadre{#ENV{width,600},#ENV{height,400}}
 				|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})</div>]
@@ -35,7 +35,7 @@
 			<BOUCLE_sous_rubriques (RUBRIQUES) {id_parent=#ID_RUBRIQUE} {tout}{par num titre, titre}>#SET{background_logo,#BACKGROUND_LOGO}
 			<div class="#ENV{class_item,col-md-4 col-sm-6}">
 				<a href="#URL_RUBRIQUE">
-					[<div class="logo[ color-(#BACKGROUND_LOGO)]">(#LOGO_RUBRIQUE
+					[<div class="logo[ background-color color-(#BACKGROUND_LOGO)]">(#LOGO_RUBRIQUE
 						|image_passe_partout{#ENV{width,600},#ENV{height,400}}
 						|image_recadre{#ENV{width,600},#ENV{height,400}}
 						|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})</div>]
