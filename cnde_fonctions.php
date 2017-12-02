@@ -46,7 +46,7 @@ function traductions_diponibles($texte, $objet, $id_trad, $lang) {
 					$traductions .= '<span class="separator">, </span>';
 				}
 				$i++;
-				$traductions .= '<a href="' . generer_url_entite($data[$identite], $objet) . '" title="' . supprimer_numero($data['titre']) .'">' . traduire_nom_langue($data['lang']). '</a>';
+				$traductions .= '<a href="' . generer_url_entite($data[$identite], $objet) . '" title="' . texte_backend(supprimer_numero($data['titre'])) . '">' . traduire_nom_langue($data['lang']). '</a>';
 			}
 
 			if ($traductions) {
