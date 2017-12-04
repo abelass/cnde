@@ -413,6 +413,12 @@ ul.style-arrow {
 
 /* 	Extra small devices Phones (<768px)) */
 @media (max-width: $screen-sm-min) {
+	#slider_activites {
+		display:none;
+	}
+	.rubrique_home section {
+		padding-top: 0;
+	}
 	.highlights {
 		.col-12 {
 			width: 100%;
