@@ -84,10 +84,6 @@ a:focus, a:hover, a:active {
 	background-color: #FF7900
 }
 
-
-
-
-
 .c-layout-header.c-layout-header-6 {
 	/*Top bar */
 	.c-topbar {
@@ -348,11 +344,7 @@ ul.style-arrow {
 				text-align: left;
 			}
 		}
-		.btn + .btn {
-			margin-left: 30px;
-		}
 	}
-
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -410,6 +402,26 @@ ul.style-arrow {
 				padding: 0;
 				width: 100%;
 			}
+		}
+	}
+	.highlights {
+		.btn + .btn {
+			margin-left: 30px;
+		}
+	}
+}
+
+/* 	Extra small devices Phones (<768px)) */
+@media (max-width: $screen-sm-min) {
+	.highlights {
+		.col-12 {
+			width: 100%;
+		}
+		.btn {
+			margin-bottom: 1em;
+		}
+		.btn + .btn {
+			margin-left: 0px;
 		}
 	}
 }
