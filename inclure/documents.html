@@ -1,3 +1,23 @@
+[(#REM) Documents catégorisés]
+#SET{exclus,#ARRAY}
+<BOUCLE_mots(MOTS){id_groupe=1} {par num titre, titre}>
+	<B_documents>
+	<section class="liste documents documents_joints">
+		<h2>#TITRE</h2>
+			<ul class="liste-items">
+			<BOUCLE_documents(DOCUMENTS)
+				{id_mot}
+				{id_rubrique?}
+				{id_article?}
+				{par rang_lien, num titre, date}>
+				#SET{exclus,#GET{exclus}|push{#ID_DOCUMENT}}
+				<li class="item">#INCLURE{fond=inclure/resume/document,id_document}</li>
+			</BOUCLE_documents>
+		</ul>
+	</section>
+	<B_documents>
+</BOUCLE_mots>
+
 [(#REM) Portfolio : album d'images ]
 <B_documents_portfolio>
 <section class="liste documents documents_portfolio" id="documents_portfolio">
@@ -7,7 +27,7 @@
 		{id_produit?}
 		{mode=DOCUMENT}{extension IN png,jpg,gif}
 		{par rang_lien, num titre, date}
-		{doublons}
+		{id_document !IN #GET{exclus}}
 		{vu=non}>[
 	<a href="(#FICHIER|image_reduire{1500,*}|extraire_attribut{src})"
 		type="#MIME_TYPE"
@@ -24,9 +44,7 @@
 </B_documents_portfolio>
 
 
-[(#REM)
-	Liste des autres documents joints
-]
+[(#REM)Liste des autres documents joints]
 <B_documents_joints>
 	<section class="liste documents documents_joints">
 	<h2><:cnde:documents_telecharger:></h2>
@@ -37,6 +55,7 @@
 			{id_produit ?}
 			{extension !IN gif,jpg,png}
 			{vu=non}
+			{id_document !IN #GET{exclus}}
 			{par rang_lien, num titre, date}>
 		<li class="item">#INCLURE{fond=inclure/resume/document,id_document}</li>
 		</BOUCLE_documents_joints>
