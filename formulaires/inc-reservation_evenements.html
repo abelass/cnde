@@ -25,7 +25,7 @@
 		<div class='editer editer_id_evenement[ (#ENV**{erreurs}|table_valeur{id_evenement}|oui)erreur]'>
 	]
 
-	<a href="#URL_EVENEMENT{#ID_EVENEMENT}">#TITRE</a>
+	<a href="#URL_EVENEMENT{#ID_EVENEMENT}">[(#TITRE|extraire_multi)]</a>
 	#SET{date_fin,#DATE_FIN}
 	<BOUCLE_evenements_lies(EVENEMENTS) {id_evenement_source=#VALEUR{id_evenement}}{!par date_fin} {0,1}>
 		#SET{date_fin,#DATE_FIN}
