@@ -345,6 +345,16 @@ ul.style-arrow {
 	}
 }
 
+/* Rubrique id_trad 113 */
+
+.rub-113 {
+	table.spip{
+		td:first-child {
+		width: 20%;
+		}
+	}
+}
+
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
 	/* Rubrique Home */

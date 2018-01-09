@@ -1,6 +1,12 @@
 #SET{titre_breadcrumb,#ENV{titre_breadcrumb,''}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}
 [(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}] #SET{quick_sidebar,#INCLURE{fond=inclure/quick_sidebar,env}}
-<body class="c-layout-header-fixed c-layout-header-6-topbar">
+[(#ENV{type-page}|=={rubrique}|oui)
+	#SET{class,rub-#ID_TRAD|>{0}|?{#ID_TRAD,#ID_RUBRIQUE}}
+]
+[(#ENV{type-page}|=={article}|oui)
+	#SET{class,art-#ID_TRAD|>{0}|?{#ID_TRAD,#ID_ARTICLE}}
+]
+<body class="c-layout-header-fixed c-layout-header-6-topbar[ (#GET{class})]">
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
 	<!-- BEGIN: HEADER -->
 	<header class="c-layout-header c-layout-header-6 c-navbar-fluid" data-minimize-offset="80">
