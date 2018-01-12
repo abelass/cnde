@@ -1,10 +1,10 @@
 #SET{titre_breadcrumb,#ENV{titre_breadcrumb,''}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}
 [(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}] #SET{quick_sidebar,#INCLURE{fond=inclure/quick_sidebar,env}}
 [(#ENV{type-page}|=={rubrique}|oui)
-	#SET{class,rub-#ID_TRAD|>{0}|?{#ID_TRAD,#ID_RUBRIQUE}}
+	#SET{class,#ID_TRAD|>{0}|?{rub-#ID_TRAD,rub-#ID_RUBRIQUE}}
 ]
 [(#ENV{type-page}|=={article}|oui)
-	#SET{class,art-#ID_TRAD|>{0}|?{#ID_TRAD,#ID_ARTICLE}}
+	#SET{class,#ID_TRAD|>{0}|?{art-#ID_TRAD,art-#ID_ARTICLE}}
 ]
 <body class="c-layout-header-fixed c-layout-header-6-topbar[ (#GET{class})]">
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
